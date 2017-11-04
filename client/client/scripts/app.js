@@ -1,6 +1,6 @@
 app = {
 
-  server: 'http://parse.CAMPUS.hackreactor.com/chatterbox/classes/messages',
+  server: '127.0.0.1/3000/classes/messages',
 
   init: function() {
     // Get username

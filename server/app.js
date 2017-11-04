@@ -1,6 +1,5 @@
 var express = require('express');
 var db = require('./db');
-db.dbConnection.connect();
 // Middleware
 var morgan = require('morgan');
 var parser = require('body-parser');
