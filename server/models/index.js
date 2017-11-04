@@ -1,9 +1,13 @@
 var db = require('../db');
+// var app = require('../app.js');
 
 module.exports = {
   messages: {
-    get: function () {}, // a function which produces all the messages
-    post: function () {} // a function which can be used to insert a message into the database
+    get: function (res, req) {
+      // console
+    }, // a function which produces all the messages
+    post: function () {
+    } // a function which can be used to insert a message into the database
   },
 
   users: {
@@ -12,4 +16,3 @@ module.exports = {
     post: function () {}
   }
 };
-

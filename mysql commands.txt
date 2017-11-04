@@ -1,42 +1,27 @@
-DROP DATABASE `chat`;
-CREATE DATABASE `chat`;
+create a database:
+  create *database name*
 
-USE `chat`;
+use the database:
+  use *database name*
 
-CREATE TABLE `messages` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `room` VARCHAR(25),
-  `usernames` VARCHAR(25),
-  `text` VARCHAR(255),
-  PRIMARY KEY (`id`)
-  -- FOREIGN KEY (`room`) REFERENCES `rooms` (`id`),
-  -- FOREIGN KEY (`user id`) REFERENCES `usernames` (`id`)
-);
+create tables:
+  create table *table name* (*column names and properties*)
+  ex. create table test1 (id int not null auto_increment primary key, student char(25), cohort int(4))
+  //  the columns are comma separated, their properties are not
 
--- CREATE TABLE `rooms` (
---   `id` INT NOT NULL AUTO_INCREMENT,
---   `roomname` VARCHAR(25),
---   PRIMARY KEY (`id`)
--- );
---
--- CREATE TABLE `usernames` (
---   `id` INT NOT NULL AUTO_INCREMENT,
---   `username` VARCHAR(25),
---   PRIMARY KEY (`id`)
--- );
--- ALTER TABLE `messages` ADD FOREIGN KEY (`room`) REFERENCES `rooms` (`id`);
--- ALTER TABLE `messages` ADD FOREIGN KEY (`username`) REFERENCES `usernames` (`id`);
-/* Create other tables and define schemas for them here! */
+insert into:
+  insert into *table name* (*column name*) values (*values to insert*)
+  //  columns and values are also comma separated and are mapped to their corresponding positions ie first value goes in first column
 
+update record
+  update *table name* set *column name* = *updated value* where *id is some unique value*
+  //  the where id is necessary to only update a targeted record as opposed to every item in that column
 
+to drop databases
+  drop database *database name*
 
-
-/*  Execute this file from the command line by typing:
- *    mysql -u root < server/schema.sql
- *  to create the database and the tables.*/
-
-
-/*
+----------------------------------------------------------------------------------------------------------------------------
+example :
 -- ---
 -- Globals
 -- ---
@@ -107,4 +92,6 @@ ALTER TABLE `messages` ADD FOREIGN KEY (username) REFERENCES `usernames` (`id`);
 -- ('','','');
 -- INSERT INTO `usernames` (`id`) VALUES
 -- ('');
-*/
+
+end example
+------------------------------------------------------------------------------------------------------

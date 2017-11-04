@@ -10,14 +10,18 @@ describe('Persistent Node Chat Server', function() {
 
   beforeEach(function(done) {
     dbConnection = mysql.createConnection({
-      user: 'root',
-      password: '',
+      user: 'student',
+      password: 'student',
       database: 'chat'
     });
     dbConnection.connect();
 
-       var tablename = ""; // TODO: fill this out
-
+       var tablename = "messages"; // TODO: fill this out
+      //  mysql.query('DROP TABLE messages', function(err, results) {
+      //    if (err) {
+      //      throw err;
+      //    }
+      //  });
     /* Empty the db table before each test so that multiple tests
      * (or repeated runs of the tests) won't screw each other up: */
     dbConnection.query('truncate ' + tablename, done);
